@@ -1,0 +1,82 @@
+body {
+  background-color: #000;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.slideshow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+  background-image: url(http://pavbca.com/walldb/original/8/1/2/453526.jpg);
+}
+.slideshow li:nth-child(2) {
+  background-image: url(https://thelimitlessnessmindsoftheworld.files.wordpress.com/2014/05/imagination-1.jpg);
+  animation-delay: 10s;
+}
+.slideshow li:nth-child(3) {
+  background-image: url(https://animaster.com/wp-content/uploads/2018/02/after-10-12-art-design-college.jpg);
+  animation-delay: 20s;
+}
+.slideshow li:nth-child(4) {
+  background-image: url(https://s3-eu-west-2.amazonaws.com/leading-edge-only/blog/technology-creativity-and-innovation-are-bound-together/8zY64eODPLHO6ICcpzkVya1EIppu73G9SxYEPLko-std.jpg);
+  animation-delay: 30s;
+}
+.slideshow li:nth-child(5) {
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea00c2d0-a66c-4df7-a968-d60c67552bb5/dapnq7k-8983cc25-25c9-47a1-94d5-a59a977bf3d1.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VhMDBjMmQwLWE2NmMtNGRmNy1hOTY4LWQ2MGM2NzU1MmJiNVwvZGFwbnE3ay04OTgzY2MyNS0yNWM5LTQ3YTEtOTRkNS1hNTlhOTc3YmYzZDEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.RSoGV14hLE_msgaf6YHiRX7uIU_fpSwf-h_lLjt4x1A);
+  animation-delay: 40s;
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
